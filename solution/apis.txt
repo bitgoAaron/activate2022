@@ -1,0 +1,30 @@
+Get OFC Wallets:
+GET https://api.bitgo-test.com/api/v2/ofc/wallet
+curl -XGET -H 'Authorization: Bearer: <<ACCESS_TOKEN>>' -H "Content-type: application/json" 'https://api.bitgo-test.com/api/v2/ofc/wallet'
+
+
+Create Trade:
+POST https://api.bitgo-test.com/api/prime/trading/v1/accounts/{accountId}/orders
+Example Body:
+{
+  "clientOrderId": "myorder1","type": "market","product": "TLTC-TBTC","side": "buy","quantity": "0.5","quantityCurrency": "TBTC"
+}
+curl -XPOST -H 'Authorization: Bearer: <<ACCESS_TOKEN>>' -H "Content-type: application/json" -d '{
+  "clientOrderId": "myorder1",
+  "type": "market",
+  "product": "TLTC-TBTC",
+  "side": "buy",
+  "quantity": "0.5",
+  "quantityCurrency": "TBTC"
+}' 'https://api.bitgo-test.com/api/prime/trading/v1/accounts/{accountId}/orders'
+
+
+Get Enterprises:
+GET https://api.bitgo-test.com/api/v2/enterprise
+curl -XGET -H 'Authorization: Bearer: <<ACCESS_TOKEN>>' -H "Content-type: application/json" 'https://api.bitgo-test.com/api/v2/enterprise'
+
+Get TBTC Wallets:
+GET https://api.bitgo-test.com/api/v2/tbtc/wallet
+curl -XGET -H 'Authorization: Bearer: <<ACCESS_TOKEN>>' -H "Content-type: application/json" 'https://api.bitgo-test.com/api/v2/tbtc/wallet'
+
+
